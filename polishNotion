@@ -1,0 +1,15 @@
+first=$2
+echo $1 $2
+shift
+shift
+for var 
+do
+    if [[ $operand = '-' ]]
+	then
+
+	   first=$((first - var))
+    else
+	first=$((first + var))
+	fi
+done
+echo $first
