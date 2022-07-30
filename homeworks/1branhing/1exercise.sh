@@ -1,3 +1,4 @@
+echo Please enter a word to see if it comes after the word "telephone" in the dictionary.
 read word
 if [[ -z $word ]]
 then
