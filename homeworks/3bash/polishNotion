@@ -1,0 +1,25 @@
+if [[ $# -lt 2 ]]
+then
+  echo One operator and one operand must be provided at the very least
+  exit
+fi
+first=$2
+operand=$1
+re='^[0-9]+$'
+shift
+shift
+for var
+do
+  if ! [[ $var =~ $re ]]
+  then
+    echo Oh my! only digits 0-9 allowed
+    exit
+  fi
+    if [[ $operand = '-' ]]
+	then
+	   first=$((first - var))
+    else
+	first=$((first + var))
+	fi
+done
+echo $first
