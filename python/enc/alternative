@@ -1,0 +1,38 @@
+# def generateKey():
+#     cap=list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+#     shuffled=list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+#     random.shuffle(shuffled)
+#     # print(shuffled)
+#     # print(cap)
+#     myKey=[]
+#     for i in range(len(shuffled)):
+#         myKey.append(cap.index(shuffled[i])-i)
+#     # print(myKey)
+#     return myKey
+# def encrypt(plaintext,key):
+#     ciphertext=""
+#     for letter in plaintext:
+#         asciiValue=ord(letter)
+#         if asciiValue>=97 and asciiValue<=97+26:
+#             index=asciiValue-97
+#             # print(asciiValue,letter)
+#             ciphertext+=chr(asciiValue+(key[index]))
+#             # print(key[index])
+#         elif asciiValue>=65 and asciiValue<=65+26:
+#             index=asciiValue-65
+#             # print(asciiValue,letter)
+#             ciphertext+=chr(asciiValue+(key[index]))
+#             # print(key[index])
+#         else:
+#             ciphertext+=letter
+#     return ciphertext
+# def decrypt(ciphertext,key):
+#     plaintext=""
+#     for char in ciphertext:
+#         if not char.isalpha():
+#             plaintext+=char
+#             # print(char)
+#         for letter in ascii_uppercase+ascii_lowercase:
+#             if char.islower() and ord(letter) + key[(ord(letter)-97)%26] == ord(char) or char.isupper() and ord(letter) + key[(ord(letter)-65)%26] == ord(char):
+#                 plaintext+=letter
+#     return plaintext
