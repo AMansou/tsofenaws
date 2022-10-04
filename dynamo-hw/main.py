@@ -3,8 +3,8 @@ import hashlib
 from boto3.dynamodb.conditions import Key, Attr
 
 session = boto3.Session(
-aws_access_key_id='AKIASU7OY7GYFG452DNL',
-aws_secret_access_key='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')
+aws_access_key_id='<ACCESS KEY>',
+aws_secret_access_key='<SECRETKEY>')
 #Then use the session to get the resource
 dynamodb=session.resource("dynamodb")
 table=dynamodb.Table("dynamo_hw")
